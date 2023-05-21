@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Request ID</th>
+      <th>Name</th>
+      <th>Application Status</th>
+      <th></th> <!-- Empty header for the Open button column -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.requestId }}</td>
+      <td>{{ student.firstName + " " + student.lastName}}</td>
+      <td>{{ student.applicationStatus }}</td>
+      <td>
+        <button (click)="redirectToNewPage(student.requestId)">Open</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

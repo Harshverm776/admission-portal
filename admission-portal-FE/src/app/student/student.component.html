@@ -1,0 +1,52 @@
+<div class="login-box">
+    <h2 style="text-align: center;">Student Information</h2>
+    <form (ngSubmit)="submitForm()">
+      <div style="text-align: center;">
+        <label for="firstName">FirstName:</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="student.firstName" required>
+      </div><br>
+      <div style="text-align: center;">
+        <label for="lastName">LastName:</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="student.lastName" required>
+      </div><br>
+      <div style="text-align: center;">
+        <label for="dob">Date-of-Birth:</label>
+        <input type="text" id="dob" name="dob" [(ngModel)]="student.dob" required>
+      </div><br>
+      <div style="text-align: center;">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" [(ngModel)]="student.address" required>
+      </div><br>
+      <div style="text-align: center;">
+        <label for="emailId">Email:</label>
+        <input type="emailId" id="emailId" name="emailId" [(ngModel)]="student.emailId" required>
+      </div><br>
+      <div style="text-align: center;">
+        <label for="mobNo">Phone No:</label>
+        <input type="text" id="mobNo" name="mobNo" [(ngModel)]="student.mobNo" required>
+      </div><br>
+      <div style="text-align: center;">
+        <label for="sscPercentage">SSC Percentage:</label>
+        <input type="text" id="sscPercentage" name="sscPercentage" [(ngModel)]="student.sscPercentage" required>
+      </div><br>
+      <div style="text-align: center;">
+        <label for="sscFile">SSC File:</label>
+        <input type="file" id="sscFile" name="sscFile" (change)="addSscFile($event)" required>
+      </div ><br>
+      <div style="text-align: center;">
+        <label for="hscPercentage">HSC Percentage:</label>
+        <input type="text" id="hscPercentage" name="hscPercentage" [(ngModel)]="student.hscPercentage" required>
+      </div><br>
+      <div style="text-align: center;">
+        <label for="hscFile">HSC File:</label>
+        <input type="file" id="hscFile" name="hscFile" (change)="addHscFile($event)" required>
+      </div ><br>
+      <div style="text-align: center;">
+        <label for="aadhaarCardFile">Aadhaar Card:</label>
+        <input type="file" id="aadhaarCardFile" name="aadhaarCardFile" (change)="addAadhaarCardFile($event)" required>
+      </div ><br>
+
+      <!-- <button style="display: block; margin: 0 auto;" type="submit" [disabled]="!formValid()" >Submit</button> -->
+      <button style="display: block; margin: 0 auto;" type="submit" >Submit</button>
+    </form>
+  </div>

@@ -1,0 +1,19 @@
+<div>
+    <h2>Student Details</h2>
+    <p><strong>Request ID:</strong> {{ requestId }}</p>
+    <p><strong>First Name:</strong> {{ student?.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ student?.lastName }}</p>
+    <p><strong>DOB:</strong> {{ student?.dob}}</p>
+    <p><strong>Address:</strong> {{ student?.address}}</p>
+    <p><strong>Email Id:</strong> {{ student?.emailId}}</p>
+    <p><strong>Mobile No:</strong> {{ student?.mobNo}}</p>
+    <p><strong>SSC Percentage:</strong> {{ student?.sscPercentage}}</p>
+    <p><strong>HSC Percentage:</strong> {{ student?.hscPercentage}}</p>
+    <p><strong>Application Date:</strong> {{ student?.applicationDate}}</p>
+    <p><strong>Application Status:</strong> {{ student?.applicationStatus}}</p>
+    <p><strong>Application Updated Date:</strong> {{ student?.statusUpdatedDate}}</p>
+
+    <button [ngClass]="{ accepted: isAccepted }" (click)="acceptRequest()" [disabled]="isAccepted">Accept</button>
+    <button [ngClass]="{ rejected: isRejected }" (click)="rejectRequest()" [disabled]="isRejected">Reject</button>
+    <button (click)="getFiles()" required>View Aadhaar</button>
+</div>

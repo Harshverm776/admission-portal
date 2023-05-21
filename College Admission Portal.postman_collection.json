@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "26358e86-9bfb-4f00-a244-899020ca8606",
+		"name": "College Admission Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15178255"
+	},
+	"item": [
+		{
+			"name": "check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdmissionDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\": \"Harsh\",\r\n    \"lastName\": \"Verma\",\r\n\t\"dob\": \"1998-08-20\", \r\n\t\"address\": \"Indore, MP\",\r\n\t\"emailId\": \"harsh@gmail.com\",\r\n\t\"mobNo\": 1234567890,\r\n\t\"sscPercentage\": 68.4,\r\n\t\"hscPercentage\": 75.2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/AdmissionDetails",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AdmissionDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallStudentDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getallStudentDetails",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getallStudentDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStudentDetailsById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getStudentDetails/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getStudentDetails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteStudentDtailsById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/DeleteStudentDtailsById/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"DeleteStudentDtailsById",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAllStudent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/DeleteAllStudent/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"DeleteAllStudent",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateStudentDetailsById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\": \"Rahul\",\r\n    \"lastName\": \"Verma\",\r\n\t\"dob\": \"1998-08-20\", \r\n\t\"address\": \"Indore, MP\",\r\n\t\"emailId\": \"harsh@gmail.com\",\r\n\t\"mobNo\": 1234567890,\r\n\t\"tenthPercentage\": 68.4,\r\n\t\"twelthPercentage\": 75.2,\r\n    \"applicationStatus\": \"Accept\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/updateStudentDetailsById/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateStudentDetailsById",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Harsh Verma/Downloads/Harsh-Verma.pdf"
+						},
+						{
+							"key": "identifier",
+							"value": "Aadhaar",
+							"type": "text"
+						},
+						{
+							"key": "identifier",
+							"value": "Ssc",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "identifier",
+							"value": "Hsc",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/upload/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"upload",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "identifier",
+							"value": "Aadhaar",
+							"type": "text"
+						},
+						{
+							"key": "identtifier",
+							"value": "Ssc",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "identifier",
+							"value": "Hsc",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/files/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"files",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAdmissionStatus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"applicationStatus\": \"Accepted\",\r\n    \"remark\": \"Not eligible\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/updateAdmissionStatus/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateAdmissionStatus",
+						"1"
+					],
+					"query": [
+						{
+							"key": "applicationStatus",
+							"value": "Accepted",
+							"disabled": true
+						},
+						{
+							"key": "remark",
+							"value": "Not Eligible",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
