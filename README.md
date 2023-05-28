@@ -11,7 +11,7 @@
 * Backend-
   * Java, Spring Boot, JPA, Maven, MySQL, Lombok.
 * Frontend-
-  * React.JS, HTML, CSS.
+  * Angular, HTML, CSS.
 
 ## Backend
 
